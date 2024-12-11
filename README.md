@@ -1,2 +1,2 @@
-# master-C-
+# Master-CPP
 C++ Code Samples
