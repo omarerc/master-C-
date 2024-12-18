@@ -20,9 +20,9 @@ int main() {
     << "Birthday: " << p.getBirthday() << std::endl;
   try {
     DateType bd(year, month, day);
-    std::cout << "Birthday: " << bd.Show() << std::endl;
-  } catch(char* msg) {
-    std::cout << msg << std::endl;  
+    std::cout << "DateType: " << bd.Show() << std::endl;
+  } catch(const char* msg) {
+    std::cout << "ERROR: " << msg << std::endl;  
   }
   return 0;
 }
