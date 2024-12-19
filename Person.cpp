@@ -1,5 +1,5 @@
 #include "Person.h"
-//#include "DateType.h"
+#include "DateType.h"
 #include <iostream>
 
 //Person::Person(std::string name, int year, int month, int day): name(name), year(year), month(month), day(day) {  };
@@ -13,9 +13,10 @@ std::string Person::getName() {
 };
 
 std::string Person::getBirthday() {
-  return std::string (std::to_string(this->month) + "/" +
-    std::to_string(this->day) + "/" +
-    std::to_string(this->year));
+  //return std::string (std::to_string(this->month) + "/" +
+  //  std::to_string(this->day) + "/" +
+  //  std::to_string(this->year));
+  return this->Birthday.Show();
 }
 
 int Person::getAge() {

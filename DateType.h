@@ -6,6 +6,8 @@
 
 class DateType {
   public:
+
+    DateType(): year(1), month(1), day(1) { /* code */ } 
     DateType(int year, int month, int day): year(year), month(month), day(day)
     {
       // Assigments to private properties

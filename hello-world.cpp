@@ -18,11 +18,15 @@ int main() {
   Person p(name, year, month, day);
   std::cout << "Hello: " << p.getName() + "\n"
     << "Birthday: " << p.getBirthday() << std::endl;
+  DateType bd;
   try {
-    DateType bd(year, month, day);
+    bd = DateType(year, month, day);
     std::cout << "DateType: " << bd.Show() << std::endl;
   } catch(const char* msg) {
     std::cout << "ERROR: " << msg << std::endl;  
   }
+  Person ps(name, bd);
+  std::cout << "Hello PS: " << ps.getName() + "\n"
+    << "PS Birthday: " << ps.getBirthday() << std::endl;
   return 0;
 }
