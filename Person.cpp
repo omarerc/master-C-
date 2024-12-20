@@ -1,5 +1,5 @@
 #include "Person.h"
-#include "DateType.h"
+#include "Date.h"
 #include <iostream>
 
 //Person::Person(std::string name, int year, int month, int day): name(name), year(year), month(month), day(day) {  };

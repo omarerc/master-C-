@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Person.h"
-#include "DateType.h"
+#include "Date.h"
 
 int main() {
   int year, month, day;
@@ -18,9 +18,9 @@ int main() {
   Person p(name, year, month, day);
   std::cout << "Hello: " << p.getName() + "\n"
     << "Birthday: " << p.getBirthday() << std::endl;
-  DateType bd;
+  Date bd;
   try {
-    bd = DateType(year, month, day);
+    bd = Date(year, month, day);
     std::cout << "DateType: " << bd.Show() << std::endl;
   } catch(const char* msg) {
     std::cout << "ERROR: " << msg << std::endl;  

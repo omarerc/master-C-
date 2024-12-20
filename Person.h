@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
-#include "DateType.h"
+#include "Date.h"
 
 class Person {
   public:
@@ -14,7 +14,7 @@ class Person {
     {
       try
       {
-        this->Birthday = DateType(year, month, day);
+        this->Birthday = Date(year, month, day);
       }
       catch(const std::exception& e)
       {
@@ -22,7 +22,7 @@ class Person {
       }  
     }
     
-    Person(std::string name, DateType Birthday): name(name), Birthday(Birthday) { /* Code */ }
+    Person(std::string name, Date Birthday): name(name), Birthday(Birthday) { /* Code */ }
 
     std::string getName();
     std::string getBirthday();
@@ -30,7 +30,7 @@ class Person {
 
   private:
     std::string name;
-    DateType Birthday;
+    Date Birthday;
 };
 
 #endif
