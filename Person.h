@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdexcept>
 #include "DateType.h"
 
 class Person {
@@ -15,9 +16,9 @@ class Person {
       {
         this->Birthday = DateType(year, month, day);
       }
-      catch(const char* msg)
+      catch(const std::exception& e)
       {
-        std::cerr << "ERROR: Unvalid Birthday Date -> " << msg << '\n';
+        std::cout << "ERROR: Unvalid Birthday Date -> " << e.what() << '\n';
       }  
     }
     

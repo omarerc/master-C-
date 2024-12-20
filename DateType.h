@@ -3,6 +3,7 @@
 #define DATETYPE_H
 
 #include <iostream>
+#include "CustomException.h"
 
 class DateType {
   public:
@@ -16,11 +17,11 @@ class DateType {
       //this->year = year;
       // Month Validation
       if ((this->month < 1) || (this->month > 12)) {
-        throw "ERROR: Month should be between 1 to 12.";
+        throw CustomException("ERROR: Month should be between 1 to 12.");
       }
       
       if (this->day < 1)
-        throw "ERROR: Day should be greater than 0.";
+        throw CustomException("ERROR: Day should be greater than 0.");
       switch (this->month)
       {
       case 1:
@@ -31,18 +32,18 @@ class DateType {
       case 10:
       case 12:
         if (this->day > 31)
-          throw "ERROR: Day can't be greater 31.";
+          throw CustomException("ERROR: Day can't be greater 31.");
         break;
       case 4:
       case 6:
       case 9:
       case 11:
         if (this->day > 30)
-          throw "ERROR: Day can't be greater 30.";
+          throw CustomException("ERROR: Day can't be greater 30.");
         break;
       case 2:
         if (this->day > 29)
-          throw "ERROR: Day can't be greater 29.";
+          throw CustomException("ERROR: Day can't be greater 29.");
         break;
       }
     }
