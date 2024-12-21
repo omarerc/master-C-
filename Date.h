@@ -17,11 +17,11 @@ class Date {
       //this->year = year;
       // Month Validation
       if ((this->month < 1) || (this->month > 12)) {
-        throw DateException("ERROR: Month should be between 1 to 12.");
+        throw DateException(std::string("ERROR: Month should be between 1 to 12."));
       }
       
       if (this->day < 1)
-        throw DateException("ERROR: Day should be greater than 0.");
+        throw DateException(std::string("ERROR: Day should be greater than 0."));
       switch (this->month)
       {
       case 1:
@@ -32,18 +32,23 @@ class Date {
       case 10:
       case 12:
         if (this->day > 31)
-          throw DateException("ERROR: Day can't be greater 31.");
+          throw DateException(std::string("ERROR: Day can't be greater 31."));
         break;
       case 4:
       case 6:
       case 9:
       case 11:
         if (this->day > 30)
-          throw DateException("ERROR: Day can't be greater 30.");
+          throw DateException(std::string("ERROR: Day can't be greater 30."));
         break;
       case 2:
-        if (this->day > 29)
-          throw DateException("ERROR: Day can't be greater 29.");
+        if (((this->year % 4) == 0) && ((this->year % 200) != 0)) {
+          if (this->day > 29)
+            throw DateException(std::string("ERROR: Day can't be greater 29."));
+        } else {
+          if (this->day > 28)
+            throw DateException(std::string("ERROR: Day can't be greater 28."));
+        }
         break;
       }
     }
