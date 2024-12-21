@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/omarerc/Documents/projects/master-cpp/master-Cpp/hello-world.o'
+relocations:     []
+...
